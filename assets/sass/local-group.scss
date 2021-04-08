@@ -75,7 +75,8 @@ html {
         max-width: none;
     }
 	.u-pageInner,
-    .u-pageInner.u-folderList.u-pageIndex {
+    .u-pageInner.u-folderList.u-pageIndex,
+    .u-pageInner.u-folderVassarevents.u-pageIndex {
         .u-lMain {
             max-width: 48em;
             margin: 0 5% 5% 5%;
@@ -110,16 +111,17 @@ html {
 		color:$burgundy-1;
 	}
 	.u-NavSite__item:focus,.u-NavSite__item:hover{
-		border-bottom:0
+		border-bottom:0;
 	}
-	.u-NavSite__item:focus,.u-NavSite__item:hover,.u-NavSite__item--isCurrent,.u-NavSite__item--isCurrent:visited{
+	.u-NavSite__item:focus,.u-NavSite__item:hover,
+    .u-NavSite__item--isCurrent,.u-NavSite__item--isCurrent:visited{
 		background-color:$burgundy-1;
 		color:#fff
 	}
 	.u-NavSite__item--isCurrent:focus,.u-NavSite__item--isCurrent:hover{
 		background-color:$gray-basic;
 		color:$gray-border;
-		padding-bottom:1em
+		padding-bottom:.75em;
 	}
 }
 .u-NavSite__itemContainer a[class*='icon-']{
@@ -148,7 +150,8 @@ html body .u-NavSite .u-NavSite__itemContainer a {
 }
 @media screen and (min-width: $small){
 	.u-pageInner,
-    .u-pageInner.u-folderList.u-pageIndex {
+    .u-pageInner.u-folderList.u-pageIndex,
+    .u-pageInner.u-folderVassarevents.u-pageIndex {
         .u-lMain {
             margin-left: auto;
             margin-right: auto;
@@ -190,33 +193,41 @@ a:hover {
 a:active {
     color: $linkColorActive
 }
-.buttonContainer{
+.buttonContainer,
+.VassarEventsFormContainer .button {
 	display:flex;
 	justify-content:center;
 	margin:1em 0
 }
-.button-link{
+.button-link,
+.VassarEventsFormContainer .button {
 	background-color:$burgundy-1;
 	color:#fff !important;
 	border:1px solid #fff
 }
-.button-link:visited{
+.button-link:visited {
 	background-color:$burgundy-1;
 	color:#fff !important
 }
-.button-link:hover,.button-link:focus{
+.button-link:hover,
+.button-link:focus,
+.VassarEventsFormContainer .button:hover,
+.VassarEventsFormContainer .button:focus {
 	background-color:#c1b5b0;
 	color:#fff !important
 }
-.button-link:active{
+.button-link:active,
+.VassarEventsFormContainer .button:active {
 	background-color:$gray-basic;
 	color:#fff !important
 }
-.button{
+.button, 
+.VassarEventsFormContainer .button {
 	margin-top:0 !important;
 	transition:none !important
 }
-.button:link{
+.button:link,
+.VassarEventsFormContainer .button {
 	background:$burgundy-1;
 	font-size:1.4em;
 	display:inline-block;
@@ -227,8 +238,44 @@ a:active {
 .button:link,.button:visited{
 	color:#fff !important
 }
-.button:link:hover,.button:visited:hover{
+.button:link:hover,
+.button:visited:hover,
+.VassarEventsFormContainer .button:hover,
+.VassarEventsFormContainer .button:focus {
 	background:$gray-basic
+}
+.VassarEventsFormContainer [id] {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    .button {
+        padding-top: .4em !important;
+    }
+}
+.VassarEventsContainer {
+    max-width: 25em;
+    margin: 2em auto;
+    p {
+        line-height: 1.5;
+    }
+}
+.VassarEventsFormContainer {
+    margin: 2em auto;
+    .mc-field-group {
+        margin: 0 0 1em;
+        display: flex;
+        flex-direction: column;
+    }
+    .indicates-required {
+        margin: 0 0 1em;;
+    }
+    #mce-responses {
+        margin: 1em 0;
+        font-weight: 700;
+        color: #95192a;
+    }
+}
+.u-folderVassarevents .u-pageTitle {
+    background-size: 20em;
 }
 table{
 	background:none !important;
