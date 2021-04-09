@@ -127,8 +127,12 @@ html {
 .u-NavSite__itemContainer a[class*='icon-']{
 	text-indent:0 !important
 }
-html body .u-NavSite .u-NavSite__itemContainer a[class*='icon-'] svg{
-	margin-right:0.4em !important
+.u-NavSite .u-NavSite__itemContainer a[class*='icon-'] svg {
+    margin-left: 0.4em !important;
+    float: right !important; 
+}
+html body .u-NavSite .u-NavSite__itemContainer a[class*='icon-'] svg {
+	margin-left:0.4em !important
 }
 html body .u-NavSite .u-NavSite__itemContainer a[class*='icon-'] svg path{
 	fill: $linkColor;
@@ -466,4 +470,10 @@ td.today>a:first-child{
 }
 .table--schedule td:first-child{
 	padding-left:0
+}
+@media screen and (min-width: 37.25em) {
+    .u-NavSite__level {
+        flex-flow:row wrap;
+        justify-content: center
+    }
 }
